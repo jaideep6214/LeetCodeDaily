@@ -1,0 +1,19 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        string = ""
+        for i in range(len(s)):
+            if s[i].isalnum():
+                string=string+(s[i].lower())
+        revstring = string[::-1]
+        if string ==revstring:
+            return True
+        return False
+
+
+        # s = s.lower().replace(" ", "").replace(",", "").replace(":", "").replace(".", "").replace("!", "").replace("?", "").replace(";", "").replace("(", "").replace(")", "").replace("[", "").replace("]", "").replace("{", "").replace("}", "").replace("'", "").replace('"', "").replace("-", "").replace("_", "").replace("+", "").replace("=", "").replace("*", "").replace("/", "").replace("\\", "").replace("|", "").replace("`", "").replace("~", "").replace("@", "").replace("#", "").replace("$", "").replace("%", "").replace("^", "").replace("&", "")
+        # return s == s[::-1]
+        
