@@ -1,0 +1,21 @@
+class Solution(object):
+    def mySqrt(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+
+        lower_index = 1
+        higher_index = x
+
+        while(lower_index<=higher_index):
+            middle_index = int((lower_index+higher_index)/2)
+            if middle_index*middle_index == x:
+                return middle_index
+            elif middle_index*middle_index > x:
+                higher_index = middle_index-1
+            elif middle_index*middle_index < x:
+                lower_index = middle_index+1
+        return higher_index
+
+        
