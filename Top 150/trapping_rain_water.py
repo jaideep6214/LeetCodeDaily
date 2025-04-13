@@ -20,7 +20,11 @@ class Solution(object):
                 right -= 1
                 right_max = max(right_max, height[right])
                 water_trapped += max(0, right_max - height[right])
-
+        #main logic is max(0, left_max - height[left])
+        #you try to check max in left and right side
+        #then you move from smaller side to largest
+        #you try to calculate the water filled by the main logic
+        #you do this till left and right indexes crosses
         return water_trapped
                     
 
